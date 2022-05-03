@@ -8,11 +8,26 @@ public class ShoppingCart {
 
    /* Attributes */
    
+   /** Number of items in the cart */
    private int numberOfItems;
    
+   /** Whether there is a discount or not */
    private double discount;
    
+   /** Stock of the product */
    private int avaliableNumber;
+   
+   /** Gets item */
+   private String getItem;
+   
+   /** Cost of the item */
+   private double cost;
+   
+   private String order; 
+   
+   
+   /* Accesors */
+   
    
    
    
