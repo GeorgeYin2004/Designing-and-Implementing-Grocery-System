@@ -1,6 +1,7 @@
 /** Name: George Yin
   * Date: May 1 2022
   * Description: This program contains the Shopping Cart class.
+  * WORK IN PROGRSS
   */
 import java.util.*;
 
