@@ -96,36 +96,32 @@ import java.util.*;
   */
   public void addOrder(){
 
-    //prompt the user for order info
-    System.out.println("Press a to see food to cart");
+    //Prompt the user to start ordering
+    System.out.println("Press the letter a to see food to cart");
     String key = in.nextLine();
 
-
     boolean validInput = false;
+    
     while(!validInput} {
       //Prompts the user
       System.out.println("Enter the type of the Order:");
       order = in.nextLine();
-      if(key.equals("a")){
+      if(key.equals("a")) {
         validInput = true;
       }
     }
 
      
-    System.out.println("Enter the orginal cost of the Order:");
+    System.out.println("Enter the orginal cost of the item:");
     double buyCost = in.nextDouble();
-    System.out.println("Enter the sell cost of the Order:");
+    System.out.println("Enter the sell cost of the item:");
     double sellCost = in.nextDouble();
-    System.out.println("Enter the percent off of the Order:");
+    System.out.println("Enter the discount percentage of the item:");
     this.discount = in.nextDouble();
-
-
     
 
-
-
-    //If statement that chekc the user item type is Food or not
-    } else if(key.equals("f")) {
+    //If statement checks the
+    if(key.equals("f")) {
        String type, String rating, String expireDate, String currentDate
       
       System.out.println("Enter the type of the Order:");
@@ -134,16 +130,10 @@ import java.util.*;
       System.out.println("Enter the date of purchase");
       int currentDate = in.nextInt();
 
-
-    //Else tell user that no such type exist
-    } else {
-      System.out.println("There is no such thing as" + type);
-    }
-
     //Calculates Total cost of the customers order
     sellCost = sellCost * (100 - this.discount) / 100;
 
-    //Update the cart with new order
+    //Updates the cart with new order
     this.itemInCart.add(order);
     this.itemBuyCost.add(buyCost);
     this.itemSellCost.add(sellCost);
@@ -153,9 +143,9 @@ import java.util.*;
     this.numberOfItems++;
   }
 
-/*
+   /*
   
- */
+     */
    public void cancelOrder(){
    
     //Array to clear the whole shopping cart
@@ -165,7 +155,7 @@ import java.util.*;
         this.itemSellCost.set(i, null);
     }
 
-    System.out.println("Orders have been removed.\n");
+    System.out.println("All of your orders have been removed.\n");
 
     
     this.numberOfItems = 0;
@@ -176,7 +166,6 @@ import java.util.*;
   
  */
   public void status(){
-    //To print out the stuff in the array list
     System.out.println(toString());
     System.out.printf("%s %10s %10s\n", "Item:", "SellCost:", "Cost to Produce:");
     //finish here
@@ -187,14 +176,11 @@ import java.util.*;
  */
   public void productFind(){
     boolean productFound = false;
-    String type = "";
+    String type = " ";
     System.out.println("Enter the the product name:");
-    String product = sc.nextLine();
+    String product = in.nextLine();
     System.out.println("The type of product:");
-    type = sc.nextLine();
-
-    //
-    if(type.equalsIgnoreCase("Food")){
+    type = in.nextLine();
       
    
   
