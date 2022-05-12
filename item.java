@@ -71,9 +71,7 @@ public class item {
       quantity = scan.nextInt();
       System.out.print("Price (per item): ");
       price = scan.nextDouble();
-      System.out.print("How many bags would you like?: ");
-      bags = scan.nextInt();
-         
+     
 
       // calculate total price for that product
       totalPrice = price * quantity;
@@ -83,7 +81,7 @@ public class item {
 
       // create Product class object and add it to the list
       product.add( new Product(
-          productName, quantity, bags, price, totalPrice) );
+          productName, quantity, price, totalPrice) );
 
       // ask for continue?
       System.out.print("would you like to buy more? (y or n): ");
