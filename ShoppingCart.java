@@ -1,6 +1,6 @@
 /** Name: George Yin
   * Date: May 1 2022
-  * Description: This program contains the Shopping Cart class.
+  * Description: This program contains the Shopping Cart class. 
   */
 import java.util.*; 
 
@@ -135,7 +135,7 @@ public class ShoppingCart {
 
   /** Creates the cart for the customer to put items in 
     */
-  public void Cart(){
+  public void Cart() {
     System.out.println("Order: ");
     String order = sc.nextLine();
     System.out.println("Order: ");
@@ -145,11 +145,11 @@ public class ShoppingCart {
     this.cost.add(productCost);
   }
 
-  /** Method to put items in the cart
+  /** Method to put the items in the cart
     */
-  public void getItemInCart(){
+  public void getItemInCart() {
     System.out.printf("%s %15s\n", "Item:", "SellCost:");
-    for(int i = 0; i < numberOfItems; i++){
+    for(int i = 0; i < numberOfItems; i++) {
       System.out.println(this.item.get(i) + "     $" + this.cost.get(i));
     }
   }
